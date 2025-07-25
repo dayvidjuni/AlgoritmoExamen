@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bf4f3db27dbbaa351400bd1fce1d312a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+                 <h3 align="center" style="font-size:16px"><b>Ruta Óptima de Lampa a Juliaca (25.93 km)</b></h3>
+                 
+    
+            <div class="folium-map" id="map_bf4f3db27dbbaa351400bd1fce1d312a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bf4f3db27dbbaa351400bd1fce1d312a = L.map(
+                "map_bf4f3db27dbbaa351400bd1fce1d312a",
+                {
+                    center: [-15.4240108, -70.3278084],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6bc2c6a93bdd54a0175163dcbc27581f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6bc2c6a93bdd54a0175163dcbc27581f.addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var poly_line_b0bdbdd56bd61a4ca187ff4c1d0af5c1 = L.polyline(
+                [[-15.4240108, -70.3278084], [-15.4308579, -70.2971445], [-15.4318497, -70.2854622], [-15.4328942, -70.2758034], [-15.4380214, -70.234895], [-15.4379269, -70.2326965], [-15.4307241, -70.2255127], [-15.4417672, -70.204457], [-15.4414285, -70.1976435], [-15.4416248, -70.1966117], [-15.4435972, -70.193823], [-15.4477496, -70.1913151], [-15.452235, -70.1906895], [-15.4576245, -70.1887716], [-15.4623819, -70.1824665], [-15.4629468, -70.1816749], [-15.4635763, -70.1807888], [-15.4641916, -70.1799077], [-15.4647719, -70.1790762], [-15.4649345, -70.1788975], [-15.4662037, -70.1772051], [-15.4668285, -70.1764107], [-15.4673524, -70.1757448], [-15.4674856, -70.1755753], [-15.4679688, -70.1749611], [-15.4689796, -70.173676], [-15.4693875, -70.1731539], [-15.4696008, -70.172895], [-15.4697443, -70.172714], [-15.4699045, -70.172529], [-15.4700196, -70.1723667], [-15.4703311, -70.1719764], [-15.4703957, -70.1718986], [-15.4706749, -70.1715365], [-15.4709724, -70.1711607], [-15.4712593, -70.1707975], [-15.4715518, -70.1704252], [-15.4718907, -70.1700006], [-15.4722076, -70.169634], [-15.4728894, -70.1687443], [-15.4738523, -70.1675152], [-15.4739666, -70.1673771], [-15.4747892, -70.1663806], [-15.4753011, -70.1657605], [-15.4753775, -70.1656721], [-15.4773378, -70.1633479], [-15.4788615, -70.1614988], [-15.4789211, -70.1614534], [-15.4796102, -70.160576], [-15.4799304, -70.1601439], [-15.4799832, -70.1600699], [-15.4803126, -70.1596085], [-15.481048, -70.1586538], [-15.4811321, -70.1585509], [-15.4814634, -70.1581125], [-15.4818627, -70.1576235], [-15.4820908, -70.1573239], [-15.4822611, -70.157096], [-15.4826364, -70.1566353], [-15.4827692, -70.1564561], [-15.4830421, -70.1561181], [-15.4835083, -70.1555464], [-15.4838043, -70.1551869], [-15.484568, -70.1542992], [-15.4851943, -70.1535148], [-15.4853438, -70.1533215], [-15.4854128, -70.1532364], [-15.4854588, -70.1531797], [-15.4856244, -70.1530338], [-15.4866948, -70.1515499], [-15.4867372, -70.1514576], [-15.4868879, -70.1511301], [-15.4876554, -70.1498773], [-15.4879644, -70.1494165], [-15.4880643, -70.149268], [-15.4885629, -70.1485398], [-15.488836, -70.1481348], [-15.4894045, -70.1473069], [-15.489806, -70.1467189], [-15.4902468, -70.1460807], [-15.4914219, -70.1443395], [-15.4914513, -70.144332], [-15.4914862, -70.1443157], [-15.491562, -70.1440575], [-15.4918054, -70.14318], [-15.4920502, -70.1421296], [-15.4922835, -70.1410754], [-15.4925277, -70.1399937], [-15.492918, -70.1391733], [-15.4929313, -70.1389968], [-15.4931709, -70.1378553], [-15.4933215, -70.1369602], [-15.4935061, -70.135983], [-15.4936304, -70.135295], [-15.4938275, -70.1343592], [-15.4940056, -70.1336131], [-15.4938666, -70.1329012], [-15.4946261, -70.1325889], [-15.4953198, -70.13231], [-15.4961088, -70.1319045], [-15.4967777, -70.131541], [-15.4976091, -70.1310816], [-15.4982824, -70.1307039], [-15.4996146, -70.1298931], [-15.5005632, -70.1294887], [-15.5004657, -70.1292567], [-15.5004087, -70.1291209], [-15.5001578, -70.1283895], [-15.4998456, -70.1275331], [-15.4989402, -70.1279131], [-15.499177, -70.1286634], [-15.4987477, -70.1288254]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            poly_line_b0bdbdd56bd61a4ca187ff4c1d0af5c1.bindTooltip(
+                `<div>
+                     Ruta: 25.93 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_abce5232ad20fc070f0219b6fe550531 = L.marker(
+                [-15.498, -70.129],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_b20026d1ac9fa71bfc7a65dbf853ea46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag-checkered",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71b770930df0eac272dfb1429ae1875c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_029060f5de8d5bd8ec0bd5663594dea1 = $(`<div id="html_029060f5de8d5bd8ec0bd5663594dea1" style="width: 100.0%; height: 100.0%;"><b>Juliaca</b><br>Plaza de Armas de Juliaca</div>`)[0];
+                popup_71b770930df0eac272dfb1429ae1875c.setContent(html_029060f5de8d5bd8ec0bd5663594dea1);
+            
+        
+
+        marker_abce5232ad20fc070f0219b6fe550531.bindPopup(popup_71b770930df0eac272dfb1429ae1875c)
+        ;
+
+        
+    
+    
+            marker_abce5232ad20fc070f0219b6fe550531.bindTooltip(
+                `<div>
+                     Juliaca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_abce5232ad20fc070f0219b6fe550531.setIcon(icon_b20026d1ac9fa71bfc7a65dbf853ea46);
+            
+    
+            var marker_599e2ab06c875ca4ce6b4367aaede6a7 = L.marker(
+                [-15.552, -70.081],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_fa71c0ecdc7ec5dfe7020438930f321d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f9ea5c96340c989ed6547edb61d8d77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37809d34fb81c55796b911f834797ac4 = $(`<div id="html_37809d34fb81c55796b911f834797ac4" style="width: 100.0%; height: 100.0%;"><b>Caracoto</b><br>Plaza Principal de Caracoto</div>`)[0];
+                popup_8f9ea5c96340c989ed6547edb61d8d77.setContent(html_37809d34fb81c55796b911f834797ac4);
+            
+        
+
+        marker_599e2ab06c875ca4ce6b4367aaede6a7.bindPopup(popup_8f9ea5c96340c989ed6547edb61d8d77)
+        ;
+
+        
+    
+    
+            marker_599e2ab06c875ca4ce6b4367aaede6a7.bindTooltip(
+                `<div>
+                     Caracoto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_599e2ab06c875ca4ce6b4367aaede6a7.setIcon(icon_fa71c0ecdc7ec5dfe7020438930f321d);
+            
+    
+            var marker_28e90b51141c8fc5ae8286e0914a3bbd = L.marker(
+                [-15.635, -70.354],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_6a7ebb91461fe7322e0e1a84721e874b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_238c0055b4420600f68ce57ca0c2029a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ebcc5373f473e3d9cf9563291cfee63c = $(`<div id="html_ebcc5373f473e3d9cf9563291cfee63c" style="width: 100.0%; height: 100.0%;"><b>Cabanillas</b><br>Distrito de Cabanillas</div>`)[0];
+                popup_238c0055b4420600f68ce57ca0c2029a.setContent(html_ebcc5373f473e3d9cf9563291cfee63c);
+            
+        
+
+        marker_28e90b51141c8fc5ae8286e0914a3bbd.bindPopup(popup_238c0055b4420600f68ce57ca0c2029a)
+        ;
+
+        
+    
+    
+            marker_28e90b51141c8fc5ae8286e0914a3bbd.bindTooltip(
+                `<div>
+                     Cabanillas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_28e90b51141c8fc5ae8286e0914a3bbd.setIcon(icon_6a7ebb91461fe7322e0e1a84721e874b);
+            
+    
+            var marker_bd5f815c8747185fb78068b7b4a23cd9 = L.marker(
+                [-15.698, -70.575],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_87acb5b59ae70c8ed46a6f1a1d82ffa0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1ed17bc19a534e5b225c4749752eb83 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc4d65253cf476e7dc318986e1a782bd = $(`<div id="html_bc4d65253cf476e7dc318986e1a782bd" style="width: 100.0%; height: 100.0%;"><b>Santa Lucia</b><br>Ciudad de Santa Lucía, Lampa</div>`)[0];
+                popup_f1ed17bc19a534e5b225c4749752eb83.setContent(html_bc4d65253cf476e7dc318986e1a782bd);
+            
+        
+
+        marker_bd5f815c8747185fb78068b7b4a23cd9.bindPopup(popup_f1ed17bc19a534e5b225c4749752eb83)
+        ;
+
+        
+    
+    
+            marker_bd5f815c8747185fb78068b7b4a23cd9.bindTooltip(
+                `<div>
+                     Santa Lucia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd5f815c8747185fb78068b7b4a23cd9.setIcon(icon_87acb5b59ae70c8ed46a6f1a1d82ffa0);
+            
+    
+            var marker_0206a080ba2b98fdf7257448449f3468 = L.marker(
+                [-15.333, -70.32],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_ac631c362f7a5873004bbed257c9100a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20227934125e0c6aa42563b7c1b5546f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e1c7497c3555787984aaedf7e094156 = $(`<div id="html_8e1c7497c3555787984aaedf7e094156" style="width: 100.0%; height: 100.0%;"><b>Cabana</b><br>Distrito de Cabana</div>`)[0];
+                popup_20227934125e0c6aa42563b7c1b5546f.setContent(html_8e1c7497c3555787984aaedf7e094156);
+            
+        
+
+        marker_0206a080ba2b98fdf7257448449f3468.bindPopup(popup_20227934125e0c6aa42563b7c1b5546f)
+        ;
+
+        
+    
+    
+            marker_0206a080ba2b98fdf7257448449f3468.bindTooltip(
+                `<div>
+                     Cabana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0206a080ba2b98fdf7257448449f3468.setIcon(icon_ac631c362f7a5873004bbed257c9100a);
+            
+    
+            var marker_9b84a05b198d6bde7fa3405be00757ce = L.marker(
+                [-15.367, -69.951],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_703f411eef061d9d936a585b05b0b5a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d37cab168423687daf1ff1a3e1da90dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c1d758a03941f11ebc38c6458d776a1 = $(`<div id="html_2c1d758a03941f11ebc38c6458d776a1" style="width: 100.0%; height: 100.0%;"><b>Pusi</b><br>Distrito de Pusi, Huancané</div>`)[0];
+                popup_d37cab168423687daf1ff1a3e1da90dd.setContent(html_2c1d758a03941f11ebc38c6458d776a1);
+            
+        
+
+        marker_9b84a05b198d6bde7fa3405be00757ce.bindPopup(popup_d37cab168423687daf1ff1a3e1da90dd)
+        ;
+
+        
+    
+    
+            marker_9b84a05b198d6bde7fa3405be00757ce.bindTooltip(
+                `<div>
+                     Pusi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b84a05b198d6bde7fa3405be00757ce.setIcon(icon_703f411eef061d9d936a585b05b0b5a6);
+            
+    
+            var marker_784f3aba0aee99cc055d38950a0e349c = L.marker(
+                [-15.311, -70.065],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_73327fea5c445d6e5835b0dde3ee9a6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b7fdddf6b4fa99090a880aa232e8564 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b32e3a4f1010fb7e3381e2813af2ee68 = $(`<div id="html_b32e3a4f1010fb7e3381e2813af2ee68" style="width: 100.0%; height: 100.0%;"><b>Samán</b><br>Distrito de Samán, Azángaro</div>`)[0];
+                popup_6b7fdddf6b4fa99090a880aa232e8564.setContent(html_b32e3a4f1010fb7e3381e2813af2ee68);
+            
+        
+
+        marker_784f3aba0aee99cc055d38950a0e349c.bindPopup(popup_6b7fdddf6b4fa99090a880aa232e8564)
+        ;
+
+        
+    
+    
+            marker_784f3aba0aee99cc055d38950a0e349c.bindTooltip(
+                `<div>
+                     Samán
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_784f3aba0aee99cc055d38950a0e349c.setIcon(icon_73327fea5c445d6e5835b0dde3ee9a6a);
+            
+    
+            var marker_8bb2ab7e1ec6f65eed5c1836cb94d49f = L.marker(
+                [-15.362, -70.365],
+                {
+}
+            ).addTo(map_bf4f3db27dbbaa351400bd1fce1d312a);
+        
+    
+            var icon_3ee1a282bc23a9822c0268b30d44677f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_507a9bf6e01547ac38eeb2b0795d994b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3d380dbad63add5c2a0b6945646329e = $(`<div id="html_f3d380dbad63add5c2a0b6945646329e" style="width: 100.0%; height: 100.0%;"><b>Lampa</b><br>La Ciudad Rosada, Lampa</div>`)[0];
+                popup_507a9bf6e01547ac38eeb2b0795d994b.setContent(html_f3d380dbad63add5c2a0b6945646329e);
+            
+        
+
+        marker_8bb2ab7e1ec6f65eed5c1836cb94d49f.bindPopup(popup_507a9bf6e01547ac38eeb2b0795d994b)
+        ;
+
+        
+    
+    
+            marker_8bb2ab7e1ec6f65eed5c1836cb94d49f.bindTooltip(
+                `<div>
+                     Lampa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8bb2ab7e1ec6f65eed5c1836cb94d49f.setIcon(icon_3ee1a282bc23a9822c0268b30d44677f);
+            
+</script>
+</html>

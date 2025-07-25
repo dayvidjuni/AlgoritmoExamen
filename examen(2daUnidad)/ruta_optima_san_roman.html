@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d0f46a364ad136e4676b0894df473e96 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d0f46a364ad136e4676b0894df473e96" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d0f46a364ad136e4676b0894df473e96 = L.map(
+                "map_d0f46a364ad136e4676b0894df473e96",
+                {
+                    center: [-15.49, -70.13],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bcefdf4bb1f8351cb0ac5f5a5490bc92 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bcefdf4bb1f8351cb0ac5f5a5490bc92.addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var poly_line_2cb045470ae585837ea359af53b5f72e = L.polyline(
+                [[-15.49, -70.13], [-15.55, -70.08]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            poly_line_2cb045470ae585837ea359af53b5f72e.bindTooltip(
+                `<div>
+                     Juliaca <-> Caracoto: 10 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9d2f891a20d52986081d226902a52c19 = L.polyline(
+                [[-15.49, -70.13], [-15.63, -70.35]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            poly_line_9d2f891a20d52986081d226902a52c19.bindTooltip(
+                `<div>
+                     Juliaca <-> Cabanillas: 22 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4a6be6c0eae4e2fd553bf796aa6c4f01 = L.polyline(
+                [[-15.49, -70.13], [-15.47, -70.16]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            poly_line_4a6be6c0eae4e2fd553bf796aa6c4f01.bindTooltip(
+                `<div>
+                     Juliaca <-> San Miguel: 4 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0ef10a5204e27f74e2b214e1ffc4fade = L.polyline(
+                [[-15.49, -70.13], [-15.33, -70.32]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            poly_line_0ef10a5204e27f74e2b214e1ffc4fade.bindTooltip(
+                `<div>
+                     Juliaca <-> Cabana: 38 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_44a04457a1bb18134714c71638ff6e84 = L.polyline(
+                [[-15.55, -70.08], [-15.63, -70.35]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            poly_line_44a04457a1bb18134714c71638ff6e84.bindTooltip(
+                `<div>
+                     Caracoto <-> Cabanillas: 14 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_01fc5eb60ae5cd655f844bc3889e7cab = L.polyline(
+                [[-15.63, -70.35], [-16.7, -70.58]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            poly_line_01fc5eb60ae5cd655f844bc3889e7cab.bindTooltip(
+                `<div>
+                     Cabanillas <-> Santa Lucia: 65 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eeb21df0a74476fdd79e92733d4aae48 = L.marker(
+                [-15.49, -70.13],
+                {
+}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var icon_133ea7c4a9eaa63f0d2444532e5fbfaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_995f3f445d6733a0167a1c08a68ee084 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52cd103a4a3c6d395b901a36bb33db59 = $(`<div id="html_52cd103a4a3c6d395b901a36bb33db59" style="width: 100.0%; height: 100.0%;"><b>Juliaca</b><br>La ciudad más grande de la región.</div>`)[0];
+                popup_995f3f445d6733a0167a1c08a68ee084.setContent(html_52cd103a4a3c6d395b901a36bb33db59);
+            
+        
+
+        marker_eeb21df0a74476fdd79e92733d4aae48.bindPopup(popup_995f3f445d6733a0167a1c08a68ee084)
+        ;
+
+        
+    
+    
+            marker_eeb21df0a74476fdd79e92733d4aae48.bindTooltip(
+                `<div>
+                     Juliaca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eeb21df0a74476fdd79e92733d4aae48.setIcon(icon_133ea7c4a9eaa63f0d2444532e5fbfaf);
+            
+    
+            var marker_1b6fc6ca3f9c561b33c734ed9b56b9f1 = L.marker(
+                [-15.55, -70.08],
+                {
+}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var icon_c846abffbe35a02c4c47c71db9a29433 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_562ddc7939f91ba16851b4a83b033f55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ee91a0c028eb4266a55439f5b637be2 = $(`<div id="html_3ee91a0c028eb4266a55439f5b637be2" style="width: 100.0%; height: 100.0%;"><b>Caracoto</b><br>Distrito cercano a Juliaca.</div>`)[0];
+                popup_562ddc7939f91ba16851b4a83b033f55.setContent(html_3ee91a0c028eb4266a55439f5b637be2);
+            
+        
+
+        marker_1b6fc6ca3f9c561b33c734ed9b56b9f1.bindPopup(popup_562ddc7939f91ba16851b4a83b033f55)
+        ;
+
+        
+    
+    
+            marker_1b6fc6ca3f9c561b33c734ed9b56b9f1.bindTooltip(
+                `<div>
+                     Caracoto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b6fc6ca3f9c561b33c734ed9b56b9f1.setIcon(icon_c846abffbe35a02c4c47c71db9a29433);
+            
+    
+            var marker_1bc92045ef01fdfe185d228e1acfdadb = L.marker(
+                [-15.63, -70.35],
+                {
+}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var icon_07b8fb7bb04924598b2cb1c36d6b0b4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0b630affc3410a52c853e62b0f7d77c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6158249beca0f47efbc7664e00077b3e = $(`<div id="html_6158249beca0f47efbc7664e00077b3e" style="width: 100.0%; height: 100.0%;"><b>Cabanillas</b><br>Conocido por sus paisajes.</div>`)[0];
+                popup_e0b630affc3410a52c853e62b0f7d77c.setContent(html_6158249beca0f47efbc7664e00077b3e);
+            
+        
+
+        marker_1bc92045ef01fdfe185d228e1acfdadb.bindPopup(popup_e0b630affc3410a52c853e62b0f7d77c)
+        ;
+
+        
+    
+    
+            marker_1bc92045ef01fdfe185d228e1acfdadb.bindTooltip(
+                `<div>
+                     Cabanillas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1bc92045ef01fdfe185d228e1acfdadb.setIcon(icon_07b8fb7bb04924598b2cb1c36d6b0b4f);
+            
+    
+            var marker_9e3791efde9cfab0c82cf82e07ba753a = L.marker(
+                [-15.47, -70.16],
+                {
+}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var icon_42af9e07e186797ac33f5b197eb8515f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_078596e677fa7d3323e9a5d4e03598d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35163eb92eff584f6481fcfcf206a131 = $(`<div id="html_35163eb92eff584f6481fcfcf206a131" style="width: 100.0%; height: 100.0%;"><b>San Miguel</b><br>Distrito en la provincia de San Román.</div>`)[0];
+                popup_078596e677fa7d3323e9a5d4e03598d6.setContent(html_35163eb92eff584f6481fcfcf206a131);
+            
+        
+
+        marker_9e3791efde9cfab0c82cf82e07ba753a.bindPopup(popup_078596e677fa7d3323e9a5d4e03598d6)
+        ;
+
+        
+    
+    
+            marker_9e3791efde9cfab0c82cf82e07ba753a.bindTooltip(
+                `<div>
+                     San Miguel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9e3791efde9cfab0c82cf82e07ba753a.setIcon(icon_42af9e07e186797ac33f5b197eb8515f);
+            
+    
+            var marker_a23185c9a246abb522ec4664774a0b17 = L.marker(
+                [-15.33, -70.32],
+                {
+}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var icon_ed31584140432439fb61684c8018fd45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2347c8cc12cc1adba967832153479ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f60134cbfe842f5d9007d8c37030cd4 = $(`<div id="html_2f60134cbfe842f5d9007d8c37030cd4" style="width: 100.0%; height: 100.0%;"><b>Cabana</b><br>Capital del distrito de Cabana.</div>`)[0];
+                popup_d2347c8cc12cc1adba967832153479ee.setContent(html_2f60134cbfe842f5d9007d8c37030cd4);
+            
+        
+
+        marker_a23185c9a246abb522ec4664774a0b17.bindPopup(popup_d2347c8cc12cc1adba967832153479ee)
+        ;
+
+        
+    
+    
+            marker_a23185c9a246abb522ec4664774a0b17.bindTooltip(
+                `<div>
+                     Cabana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a23185c9a246abb522ec4664774a0b17.setIcon(icon_ed31584140432439fb61684c8018fd45);
+            
+    
+            var marker_5dbc6753f5f5b1417fd7ec141297c8cd = L.marker(
+                [-16.7, -70.58],
+                {
+}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var icon_b4c839eb76ed9b7b9cf2e9bfb32be376 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7019ac14773d10f955072fb35a7ca917 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a94470af39975335bfd47d3cdc39c6cf = $(`<div id="html_a94470af39975335bfd47d3cdc39c6cf" style="width: 100.0%; height: 100.0%;"><b>Santa Lucia</b><br>Importante nudo ferroviario y vial.</div>`)[0];
+                popup_7019ac14773d10f955072fb35a7ca917.setContent(html_a94470af39975335bfd47d3cdc39c6cf);
+            
+        
+
+        marker_5dbc6753f5f5b1417fd7ec141297c8cd.bindPopup(popup_7019ac14773d10f955072fb35a7ca917)
+        ;
+
+        
+    
+    
+            marker_5dbc6753f5f5b1417fd7ec141297c8cd.bindTooltip(
+                `<div>
+                     Santa Lucia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5dbc6753f5f5b1417fd7ec141297c8cd.setIcon(icon_b4c839eb76ed9b7b9cf2e9bfb32be376);
+            
+    
+            var poly_line_9f7246ec0c0995e142589d3600b35550 = L.polyline(
+                [[-15.33, -70.32], [-15.49, -70.13], [-15.55, -70.08]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            poly_line_9f7246ec0c0995e142589d3600b35550.bindTooltip(
+                `<div>
+                     Ruta más corta: 48.00 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c496214d3f777d4ccb3b3d41705d2333 = L.marker(
+                [-15.55, -70.08],
+                {
+}
+            ).addTo(map_d0f46a364ad136e4676b0894df473e96);
+        
+    
+            var icon_00a23b0d3b87c24d1455e0de2bf578dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag-checkered",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c53d7922c7478d31a7b1bed533cd6a4e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70ef5e474730c03fa79795d56783f271 = $(`<div id="html_70ef5e474730c03fa79795d56783f271" style="width: 100.0%; height: 100.0%;"><b>Destino: Caracoto</b><br>Distancia total: 48.00 km</div>`)[0];
+                popup_c53d7922c7478d31a7b1bed533cd6a4e.setContent(html_70ef5e474730c03fa79795d56783f271);
+            
+        
+
+        marker_c496214d3f777d4ccb3b3d41705d2333.bindPopup(popup_c53d7922c7478d31a7b1bed533cd6a4e)
+        ;
+
+        
+    
+    
+            marker_c496214d3f777d4ccb3b3d41705d2333.bindTooltip(
+                `<div>
+                     ¡Llegaste!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c496214d3f777d4ccb3b3d41705d2333.setIcon(icon_00a23b0d3b87c24d1455e0de2bf578dc);
+            
+</script>
+</html>
